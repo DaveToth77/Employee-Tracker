@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "dev": "nodemon server"
   },
@@ -22,11 +22,13 @@
   },
   "homepage": "https://github.com/DaveToth77/Employee-Tracker#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "console.table": "^0.10.0",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.0"
   },
   "devDependencies": {
+    "jest": "^27.2.4",
     "nodemon": "^2.0.13"
   }
 }
