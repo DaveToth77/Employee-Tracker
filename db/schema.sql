@@ -20,5 +20,5 @@ CREATE TABLE roles (
 
 CREATE TABLE department (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    dept_name VARCHAR(255) NOT NULL,
 );
