@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/DaveToth77/Employee-Tracker#readme",
   "dependencies": {
+    "chalk": "^4.1.2",
     "console.table": "^0.10.0",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.0"

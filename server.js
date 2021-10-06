@@ -1,13 +1,13 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
-
+const chalk = require('chalk');
 const cTable = require('console.table');
 
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'employees'
+    database: 'employeesDB'
 });
 
 
@@ -69,7 +69,7 @@ const mainMenu = () => {
         })
 }
 
-function viewAllDept() {
+async function viewAllDept() {
     let query = "SELECT * FROM department"
     connection.query(query, function (err, res) {
         console.table(res);
