@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "dev": "nodemon server"
   },
@@ -27,6 +27,7 @@
     "mysql2": "^2.3.0"
   },
   "devDependencies": {
+    "jest": "^27.2.4",
     "nodemon": "^2.0.13"
   }
 }
