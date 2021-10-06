@@ -1,36 +1,23 @@
-const cTable = require('console.table');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 
-const apiRoutes = require('./routes/apiRoutes');
+const cTable = require('console.table');
 
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'public00',
+    password: 'password',
     database: 'employees'
 });
 
-Console.log(`
-_____                _                         _____              _             
-|  ___|              | |                       |_   _|            | |            
-| |__ _ __ ___  _ __ | | ___  _   _  ___  ___    | |_ __ __ _  ___| | _____ _ __ 
-|  __| '_ `
-    _\ | '_ \| |/ _ \| | | |/ _ \/ _ \   | | '
-    __ / _ ` |/ __| |/ / _ | '__|
-| |__| | | | | | |_) | | (_) | |_| |  __|  __/   | | | | (_| | (__|   |  __| |   
-\____|_| |_| |_| .__/|_|\___/ \__, |\___|\___|   \_|_|  \__,_|\___|_|\_\___|_|   
-               | |             __/ |                                             
-               |_|            |___/                                               ` + '\n'
-);
 
-connection.connect(function (err) {
+db.connect(function (err) {
     if (err) throw err;
     mainMenu();
 });
 
 const mainMenu = () => {
-    return inquirer.prompt([{
+    return inquirer.prompt({
             type: 'list',
             name: 'menuChoices',
             message: 'What would you like to do?',
@@ -44,7 +31,7 @@ const mainMenu = () => {
                 'Update Employee Role',
                 'Exit'
             ]
-        }]
+        })
         .then(answer => {
             switch (answer.mainMenu) {
                 case "View All Employees":
@@ -79,7 +66,7 @@ const mainMenu = () => {
                     connection.end();
                     break;
             }
-        }))
+        })
 }
 
 function viewAllEmployees() {

@@ -1,14 +1,14 @@
---populate department table
-INSERT INTO department(dept_name)
+-- USE employeesDB;
+
+INSERT INTO department (department_name)
 VALUES
 ('Engineering'),
 ('Sales'),
 ('Legal'),
 ('Human Resources'),
-('Administration'):
+('Administration');
 
--- populate roles table
-INSERT INTO roles(title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES
 ('Jr Software Engineer', 75000, 1),
 ('Sr Software Engineer', 100000, 1),
@@ -27,8 +27,7 @@ VALUES
 ('CEO', 250000, 5);
 
 
---populate employees table
-INSERT INTO employees(first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
 ('Alisa', 'Florence', 11, 0),
 ('Dexter','Goldman', 10, 1),
