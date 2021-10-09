@@ -39,6 +39,7 @@ const mainMenu = () => {
                 'Exit'
             ]
         })
+        
         .then(answer => {
             switch (answer.menuChoices) {
                 case 'View All Departments':
@@ -76,7 +77,7 @@ const mainMenu = () => {
         })
 }
 
-async function viewAllDept() {
+function viewAllDept() {
     let query = "SELECT * FROM department"
     connection.query(query, function (err, res) {
         console.table(res);
