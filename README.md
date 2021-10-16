@@ -17,7 +17,7 @@
 
 ## Walkthough Video
 
-[Walkthrough Vid](https://youtu.be/lF-xQsC3U6I)
+[Walkthrough Vid](https://youtu.be/VasySUpKtyc)
 
 ## Installation Instructions 
 Run "npm i" to install dependencies. Run "node start" to launch the Employee Tracker program.
