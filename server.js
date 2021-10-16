@@ -15,7 +15,7 @@ connection.connect(function (err) {
     if (err) throw err;
     mainMenu();
 });
-console.log((chalk.blue`███████╗███╗   ███╗██████╗ ██╗      ██████╗ ██╗   ██╗███████╗███████╗    ████████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
+console.log((chalk.blue `███████╗███╗   ███╗██████╗ ██╗      ██████╗ ██╗   ██╗███████╗███████╗    ████████╗██████╗  █████╗  ██████╗██╗  ██╗███████╗██████╗ 
 ██╔════╝████╗ ████║██╔══██╗██║     ██╔═══██╗╚██╗ ██╔╝██╔════╝██╔════╝    ╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
 █████╗  ██╔████╔██║██████╔╝██║     ██║   ██║ ╚████╔╝ █████╗  █████╗         ██║   ██████╔╝███████║██║     █████╔╝ █████╗  ██████╔╝
 ██╔══╝  ██║╚██╔╝██║██╔═══╝ ██║     ██║   ██║  ╚██╔╝  ██╔══╝  ██╔══╝         ██║   ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
@@ -39,7 +39,7 @@ const mainMenu = () => {
                 'Exit'
             ]
         })
-        
+
         .then(answer => {
             switch (answer.menuChoices) {
                 case 'View All Departments':
@@ -52,19 +52,19 @@ const mainMenu = () => {
 
                 case 'View All Employees':
                     viewAllEmployees();
-                    break;                
+                    break;
 
                 case 'Add Department':
                     addDept();
                     break;
 
-                    case 'Add Role':
+                case 'Add a Role':
                     addRole();
                     break;
 
                 case 'Add an Employee':
                     addEmployee();
-                    break;                 
+                    break;
 
                 case 'Update Employee Role':
                     updateEmployeeRole();
@@ -84,6 +84,7 @@ function viewAllDept() {
         mainMenu();
     });
 }
+
 function viewAllRoles() {
     let query = "SELECT * FROM role"
     connection.query(query, function (err, res) {
